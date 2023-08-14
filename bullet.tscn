@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/laserRed01.png" type="Texture" id=2]
+[ext_resource path="res://bullet.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+[node name="bullet" type="Area2D"]
+collision_layer = 0
+collision_mask = 16
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 1, 0.858824, 0.305882, 1 )
+position = Vector2( 0, 2.84217e-14 )
+scale = Vector2( 1.17928, 0.300733 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+position = Vector2( -8.9407e-08, 0 )
+scale = Vector2( 0.9, 1 )
+
+[connection signal="body_entered" from="." to="." method="_on_bullet_body_entered"]
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

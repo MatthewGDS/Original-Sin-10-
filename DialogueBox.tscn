@@ -1,0 +1,15 @@
+[gd_scene format=2]
+
+[node name="Polygon2D" type="Polygon2D"]
+modulate = Color( 0.235294, 0.2, 0.2, 1 )
+position = Vector2( 8, -24 )
+scale = Vector2( 1.08144, 1.30493 )
+polygon = PoolVector2Array( -7.39756, 177.788, -7.39756, 153.266, -7.39756, 128.743, 168, 128, 325.493, 128.743, 355.083, 153.266, 325.493, 177.788 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 15.0
+margin_top = 141.0
+margin_right = 304.0
+margin_bottom = 166.0
+text = "Hello Welcome to my Dialogue Box"
